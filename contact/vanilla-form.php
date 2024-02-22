@@ -82,17 +82,16 @@ switch ($vfSender->data['gender']) {
 }
 
 // Define here subject of the e-mail message
-$subject = 'Vanilla Contact Form - New Message from '.$vfSender->data['name'];
+$subject = 'Portal Participacion Ciudadana - Nuevo mensaje de '.$vfSender->data['name'];
 
 // Define here content of the e-mail message
-$content = "Hey,
-You've received new message from your website. Check the details below:
+$content = "Hola, Este es un mensaje del portal de participación Ciudadana. Comprueba los detalles:
 
-Sender's IP address: ".Utils::getIp()."
-Name: {NAME}
+Dirección IP del emisor: ".Utils::getIp()."
+Nombre: {NAME}
 E-mail: {EMAIL}
-Phone number: {TEL}
-Subject: {SUBJECT}
+Teléfono: {TEL}
+Asunto: {SUBJECT}
 Message:
 {MESSAGE}
 ";
