@@ -50,7 +50,7 @@ $vf_config = array(
      * E.g. Multiple recipients
      * 'emailRecipients' => 'john@domain.com, andy@domain.com',
      */
-    'emailRecipients' => 'your-email@domain.com',
+    'emailRecipients' => 'participacion@aytosanlorenzo.es',
 
     /**
      * If is not empty it sets a header From in e-mail message (sets sender e-mail).
@@ -59,7 +59,7 @@ $vf_config = array(
      * E.g. Single recipient
      * 'emailSender' => 'john@domain.com',
      */
-    'emailSender' => 'john@domain.com'
+    'emailSender' => 'participacion@aytosanlorenzo.es'
     /*** /Code Snippet - quick-start ***/
 );
 $vfSender = new MailSender($vf_config);
@@ -69,25 +69,25 @@ $vfSender = new MailSender($vf_config);
  * You can access and modify variables by:
  * $vfSender->data['variable-name']
  */
-switch ($vfSender->data['gender']) {
-    case "F":
-        $vfSender->data['gender'] = "Female";
-        break;
-    case "M":
-        $vfSender->data['gender'] = "Male";
-        break;
-    default:
-        $vfSender->data['gender'] = "Not selected";
-        break;
-}
+// switch ($vfSender->data['gender']) {
+//     case "F":
+//         $vfSender->data['gender'] = "Female";
+//         break;
+//     case "M":
+//         $vfSender->data['gender'] = "Male";
+//         break;
+//     default:
+//         $vfSender->data['gender'] = "Not selected";
+//         break;
+// }
 
 // Define here subject of the e-mail message
-$subject = 'Portal Participacion Ciudadana - Nuevo mensaje de '.$vfSender->data['name'];
+$subject = 'Portal Participacion Ciudadana - Nuevo mensaje de ' . $vfSender->data['name'];
 
 // Define here content of the e-mail message
 $content = "Hola, Este es un mensaje del portal de participación Ciudadana. Comprueba los detalles:
 
-Dirección IP del emisor: ".Utils::getIp()."
+Dirección IP del emisor: " . Utils::getIp() . "
 Nombre: {NAME}
 E-mail: {EMAIL}
 Teléfono: {TEL}
